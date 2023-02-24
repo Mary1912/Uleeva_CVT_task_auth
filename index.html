@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<form action="/example/handler.php">
+    <label>Логин:</label>
+    <input type="email" name="login" required />
+    <label>Пароль:</label>
+    <input type="password" name="password" pattern="^([а-яА-ЯёЁa-zA-Z])(.{6,}).*$" />
+    <input type="submit" value="Войти" name="submit" class="submit" />
+</form>
+</html>
