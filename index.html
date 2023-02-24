@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
+   
 </head>
+<body>
 <form action="/example/handler.php">
     <label>Логин:</label>
     <input type="email" name="login" required />
     <label>Телефон:</label>
-    <input type="tel" name="tel" 
-    pattern="^\+?[78][-\(]?\d{3}\)?\d{7}$" title="Должен использоваться формат 8хххххххххх, +7хххххххххх, 8(ххх)ххххххх, +7(ххх)ххххххх" required />
+    <input type="tel" name="tel" pattern="^\+?[78][-\(]?\d{3}\)?\d{7}$" title="Должен использоваться формат 8хххххххххх, +7хххххххххх, 8(ххх)ххххххх, +7(ххх)ххххххх" required />
     <label>Пароль:</label>
     <input type="password" name="password" pattern="^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}).*$" title="Должны быть использованы буквы латиницы разных регистров, цифры, спец. символы, не менее 6 символов" required />
     <input type="submit" value="Войти" name="submit" class="submit" />
@@ -36,7 +37,7 @@
   if (day == 6) DayofWeek = "Пятница";
   if (day == 7) DayofWeek = "Суббота";
 </script>
-            
+ 
 <script>           
 setInterval(function() {
   var cd = new Date();
@@ -44,6 +45,7 @@ setInterval(function() {
   clockdat.innerHTML = cd.toLocaleTimeString();
 }, 1000);
 </script>
+
 <div class="center" style="font-weight: bold; padding:5px;">
   <span style="color:aqua">Сегодня:</span>
   <span style="color:#FFFFFF; font-size:14px;">
@@ -55,4 +57,21 @@ setInterval(function() {
   </span>
 </form>
 
+<script>
+var ba = ["Chrome","Firefox","Safari","Opera","MSIE","Trident","Edge"];
+var b, ua = navigator.userAgent;
+for(var i=0; i < ba.length; i++){
+    if( ua.indexOf(ba[i]) > -1 ){
+        b = ba[i];
+        break;
+    }
+}
+if(b == "MSIE" || b == "Trident" || b == "Edge"){
+    b = "Internet Explorer";
+
+alert("Internet Explorer не поддерживает данный сайт");
+}
+</script>
+
+</body>
 </html>
