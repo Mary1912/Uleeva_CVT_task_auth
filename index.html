@@ -7,8 +7,11 @@
 <form action="/example/handler.php">
     <label>Логин:</label>
     <input type="email" name="login" required />
+    <label>Телефон:</label>
+    <input type="tel" name="tel" 
+    pattern="^\+?[78][-\(]?\d{3}\)?\d{7}$" title="Должен использоваться формат 8хххххххххх, +7хххххххххх, 8(ххх)ххххххх, +7(ххх)ххххххх" required />
     <label>Пароль:</label>
-    <input type="password" name="password" pattern="^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}).*$" title="Должны быть использованы буквы латиницы разных регистров, цифры, спец. символы, не менее 6 символов" required><br>
+    <input type="password" name="password" pattern="^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}).*$" title="Должны быть использованы буквы латиницы разных регистров, цифры, спец. символы, не менее 6 символов" required />
     <input type="submit" value="Войти" name="submit" class="submit" />
 </form>
 </html>
