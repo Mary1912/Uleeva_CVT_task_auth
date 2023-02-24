@@ -8,7 +8,7 @@
     <label>Логин:</label>
     <input type="email" name="login" required />
     <label>Пароль:</label>
-    <input type="password" name="password" pattern="^([а-яА-ЯёЁa-zA-Z])(.{6,}).*$" />
+    <input type="password" name="password" pattern="^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}).*$" title="Должны быть использованы буквы латиницы разных регистров, цифры, спец. символы, не менее 6 символов" required><br>
     <input type="submit" value="Войти" name="submit" class="submit" />
 </form>
 </html>
